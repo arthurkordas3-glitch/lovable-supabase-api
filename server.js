@@ -1,3 +1,4 @@
+import personRoutes from './routes/person.js';
 import 'dotenv/config'
 import express from 'express'
 import { Paddle } from '@paddle/paddle-node-sdk'
@@ -613,6 +614,7 @@ app.get('/config/status', (req, res) => {
     checkout_enabled: true
   })
 })
+app.use('/api/people', personRoutes);
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log('======================================')
