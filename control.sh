@@ -41,11 +41,11 @@ echo ""
 echo "🌐 [9] Network Connectivity:"
 ping -c 1 8.8.8.8 >/dev/null 2>&1 && echo "Internet: Connected ✅" || echo "Internet: Offline ❌"
 echo ""
-echo "☁️ [10] Fly.io Cloud Config Check:"
-if [ -f fly.toml ]; then
-    echo "fly.toml: Present ✅ (App: $(grep 'app =' fly.toml | cut -d'"' -f2))"
+echo "☁️ [10] Koyeb Fly.io Cloud Config Check Dockerfile Config Check:"
+if [ -f koyeb.yaml ]; then
+    echo "koyeb.yaml koyeb.yaml: Present Dockerfile: Present ✅ (App: $(grep 'app =' koyeb.yaml | cut -d'"' -f2))"
 else
-    echo "fly.toml: Missing ❌"
+    echo "koyeb.yaml: Missing ❌"
 fi
 echo "=================================================="
 echo "💡 Tip: Run './control.sh' anytime for a full system audit!"
