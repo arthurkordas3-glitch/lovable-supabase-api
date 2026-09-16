@@ -1,0 +1,15 @@
+version: v1
+services:
+  - name: alcharmy-api
+    type: web
+    instance_type: free
+    regions:
+      - frankfurt
+    docker:
+      dockerfile: Dockerfile
+    ports:
+      - port: 3001
+        protocol: http
+    env:
+      - name: PORT
+        value: "3001"
