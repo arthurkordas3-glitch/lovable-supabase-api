@@ -1,0 +1,16 @@
+app = "alcharmy-api"
+primary_region = "iad"
+
+[build]
+  builder = "heroku/buildpacks:20"
+
+[http_service]
+  internal_port = 3001
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+[env]
+  PORT = "3001"
+  NODE_ENV = "production"
